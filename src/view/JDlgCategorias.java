@@ -4,6 +4,7 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
 import tools.Util;
 
 public class JDlgCategorias extends javax.swing.JDialog {
@@ -190,6 +191,7 @@ public class JDlgCategorias extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+        JOptionPane.showMessageDialog(null, "Exclusão realizada");
         Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
     }//GEN-LAST:event_jBtnExcluirActionPerformed

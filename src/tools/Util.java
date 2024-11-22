@@ -4,6 +4,7 @@
  */
 package tools;
 
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JTextField;
@@ -25,13 +26,9 @@ public class Util {
             if (comp[i] instanceof JComboBox) {
                 ((JComboBox) comp[i]).setSelectedIndex(-1);
             }
+            if (comp[i] instanceof JCheckBox) {
+                ((JCheckBox) comp[i]).setSelected(false);
+            }
         }
     }
 }
-
-//limpar textfild setext("");
-//limpar combobox setselectedindex(-1);
-//quem o jcomponent foi
-//usar instanceof
-
-//criar jdlgpedidos

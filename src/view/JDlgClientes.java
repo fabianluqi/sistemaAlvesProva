@@ -4,6 +4,7 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
 import tools.Util;
 
 public class JDlgClientes extends javax.swing.JDialog {
@@ -88,7 +89,7 @@ public class JDlgClientes extends javax.swing.JDialog {
 
         jLabel15.setText("Número");
 
-        jCboNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2" }));
+        jCboNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Funcionário", "Usuario" }));
 
         jBtnIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-mais-15.png"))); // NOI18N
         jBtnIncluir.setText("Incluir");
@@ -306,6 +307,7 @@ public class JDlgClientes extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
+        JOptionPane.showMessageDialog(null, "Exclusão realizada");
         Util.limpar(jTxtCodigo, jTxtNome, jTxtApelido, jTxtApelido, jTxtCpf, jTxtNascimento, jTxtSenha,
                 jTxtEmail, jTxtCelular, jTxtEndereco, jTxtCep, jTxtCidade, jTxtBairro, jTxtNumero, jCboNivel, jChAtivo);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
