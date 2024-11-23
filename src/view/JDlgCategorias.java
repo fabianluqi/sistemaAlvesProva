@@ -5,6 +5,7 @@
 package view;
 
 import javax.swing.JOptionPane;
+import pesquisar.JDlgCategoriasPesquisar;
 import tools.Util;
 
 public class JDlgCategorias extends javax.swing.JDialog {
@@ -209,7 +210,8 @@ public class JDlgCategorias extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-
+        JDlgCategoriasPesquisar jDlgCatPesq = new JDlgCategoriasPesquisar(null, true);
+        jDlgCatPesq.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     public static void main(String args[]) {

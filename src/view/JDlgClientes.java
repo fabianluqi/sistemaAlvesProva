@@ -5,6 +5,7 @@
 package view;
 
 import javax.swing.JOptionPane;
+import pesquisar.JDlgClientesPesquisar;
 import tools.Util;
 
 public class JDlgClientes extends javax.swing.JDialog {
@@ -327,7 +328,8 @@ public class JDlgClientes extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
-
+        JDlgClientesPesquisar jDlgCliPesq = new JDlgClientesPesquisar(null, true);
+        jDlgCliPesq.setVisible(true);
     }//GEN-LAST:event_jBtnPesquisarActionPerformed
 
     public static void main(String args[]) {
