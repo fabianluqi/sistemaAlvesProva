@@ -63,7 +63,7 @@ public class JDlgClientesPesquisar extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnOkActionPerformed
-        System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_jBtnOkActionPerformed
 
     public static void main(String args[]) {
