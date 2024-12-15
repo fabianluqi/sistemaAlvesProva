@@ -186,6 +186,8 @@ public class JDlgCategorias extends javax.swing.JDialog {
         Util.habilitar(true, jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+         Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
+                jBtnConfirmar, jBtnCancelar);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed

@@ -298,6 +298,8 @@ public class JDlgClientes extends javax.swing.JDialog {
                 jTxtEmail, jTxtCelular, jTxtEndereco, jTxtCep, jTxtCidade, jTxtBairro, jTxtNumero, jCboNivel, jChAtivo,
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+        Util.limpar(jTxtCodigo, jTxtNome, jTxtApelido, jTxtApelido, jTxtCpf, jTxtNascimento, jTxtSenha,
+                jTxtEmail, jTxtCelular, jTxtEndereco, jTxtCep, jTxtCidade, jTxtBairro, jTxtNumero, jCboNivel, jChAtivo);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
     private void jBtnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAlterarActionPerformed
