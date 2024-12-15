@@ -4,9 +4,11 @@
  */
 package tools;
 
+import java.util.Date;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class Util {
@@ -31,4 +33,46 @@ public class Util {
             }
         }
     }
+
+    public static void mostrar(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+
+    public static boolean perguntar(String mensagem) {
+        JOptionPane.showConfirmDialog(null, mensagem);
+        return false;
+    }
+
+    public static int setToInt(String cad) {
+        return Integer.parseInt(cad);
+    }
+
+    public static String intToStr(int num) {
+        return String.valueOf(num);
+    }
+
+    public static double setToDouble(String cad) {
+        return Double.parseDouble(cad);
+    }
+
+    public static Date strToDate(String cad) {
+        return null;
+    }
+
+    public static String dateToStr(Date data) {
+        return "";
+    }
+
+    public static String doubleToStr(double value) {
+        return String.valueOf(value);
+    }
+
+    public static boolean strToBool(String cad) {
+        return Boolean.parseBoolean(cad);
+    }
+
+    public static String boolToStr(boolean value) {
+        return String.valueOf(value);
+    }
+
 }

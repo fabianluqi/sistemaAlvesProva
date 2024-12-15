@@ -4,7 +4,6 @@
  */
 package view;
 
-import javax.swing.JOptionPane;
 import pesquisar.JDlgUsuariosPesquisar;
 import tools.Util;
 
@@ -310,7 +309,7 @@ public class JDlgUsuarios extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        JOptionPane.showMessageDialog(null, "Exclusão realizada");
+        Util.mostrar("Exclusão realizada");
         Util.limpar(jTxtCodigo, jTxtNome, jTxtApelido, jTxtApelido, jTxtCpf, jTxtNascimento, jTxtSenha,
                 jTxtEmail, jTxtCelular, jTxtEndereco, jTxtCep, jTxtCidade, jTxtBairro, jTxtNumero, jCboNivel, jChAtivo);
     }//GEN-LAST:event_jBtnExcluirActionPerformed

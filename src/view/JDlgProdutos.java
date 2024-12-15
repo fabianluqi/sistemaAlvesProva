@@ -4,7 +4,6 @@
  */
 package view;
 
-import javax.swing.JOptionPane;
 import pesquisar.JDlgProdutosPesquisar;
 import tools.Util;
 
@@ -214,7 +213,7 @@ public class JDlgProdutos extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        JOptionPane.showMessageDialog(null, "Exclusão realizada");
+        Util.mostrar("Exclusão realizada");
         Util.limpar(jTxtCategoria, jTxtCodigo, jTxtDescricao, jTxtImagem, jTxtMarca, jTxtNome, jTxtPreco,
                 jBtnConfirmar, jBtnCancelar);
     }//GEN-LAST:event_jBtnExcluirActionPerformed
