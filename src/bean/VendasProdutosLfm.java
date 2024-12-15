@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "vendas_produtos_lfm",
-         catalog = "db_lucas_alves"
+        catalog = "db_lucas_alves"
 )
 public class VendasProdutosLfm implements java.io.Serializable {
 
@@ -60,7 +60,7 @@ public class VendasProdutosLfm implements java.io.Serializable {
         this.idvendasProdutosLfm = idvendasProdutosLfm;
     }
 
-    @Column(name = "pedido_lfm", nullable = false)
+    @Column(name = "pedido_lfm", nullable = true)
     public int getPedidoLfm() {
         return this.pedidoLfm;
     }
@@ -69,7 +69,7 @@ public class VendasProdutosLfm implements java.io.Serializable {
         this.pedidoLfm = pedidoLfm;
     }
 
-    @Column(name = "produtos_lfm", nullable = false)
+    @Column(name = "produtos_lfm", nullable = true)
     public int getProdutosLfm() {
         return this.produtosLfm;
     }
@@ -78,7 +78,7 @@ public class VendasProdutosLfm implements java.io.Serializable {
         this.produtosLfm = produtosLfm;
     }
 
-    @Column(name = "quantidade_lfm", nullable = false)
+    @Column(name = "quantidade_lfm", nullable = true)
     public int getQuantidadeLfm() {
         return this.quantidadeLfm;
     }
@@ -87,7 +87,7 @@ public class VendasProdutosLfm implements java.io.Serializable {
         this.quantidadeLfm = quantidadeLfm;
     }
 
-    @Column(name = "valor_unidade_lfm", nullable = false, precision = 10)
+    @Column(name = "valor_unidade_lfm", nullable = true, precision = 10)
     public double getValorUnidadeLfm() {
         return this.valorUnidadeLfm;
     }
@@ -96,7 +96,7 @@ public class VendasProdutosLfm implements java.io.Serializable {
         this.valorUnidadeLfm = valorUnidadeLfm;
     }
 
-    @Column(name = "status_lfm", nullable = false, length = 10)
+    @Column(name = "status_lfm", nullable = true, length = 10)
     public String getStatusLfm() {
         return this.statusLfm;
     }
@@ -106,7 +106,7 @@ public class VendasProdutosLfm implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "data_adicao_lfm", length = 10)
+    @Column(name = "data_adicao_lfm", nullable = true, length = 10)
     public Date getDataAdicaoLfm() {
         return this.dataAdicaoLfm;
     }

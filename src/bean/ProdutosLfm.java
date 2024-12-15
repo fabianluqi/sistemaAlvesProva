@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "produtos_lfm",
-         catalog = "db_lucas_alves"
+        catalog = "db_lucas_alves"
 )
 public class ProdutosLfm implements java.io.Serializable {
 
@@ -49,7 +49,7 @@ public class ProdutosLfm implements java.io.Serializable {
         this.idprodutosLfm = idprodutosLfm;
     }
 
-    @Column(name = "nome_lfm", nullable = false, length = 50)
+    @Column(name = "nome_lfm", nullable = true, length = 50)
     public String getNomeLfm() {
         return this.nomeLfm;
     }
@@ -58,7 +58,7 @@ public class ProdutosLfm implements java.io.Serializable {
         this.nomeLfm = nomeLfm;
     }
 
-    @Column(name = "preco_lfm", nullable = false, precision = 10)
+    @Column(name = "preco_lfm", nullable = true, precision = 10)
     public double getPrecoLfm() {
         return this.precoLfm;
     }
@@ -67,7 +67,7 @@ public class ProdutosLfm implements java.io.Serializable {
         this.precoLfm = precoLfm;
     }
 
-    @Column(name = "categoria_lfm", nullable = false, length = 45)
+    @Column(name = "categoria_lfm", nullable = true, length = 45)
     public String getCategoriaLfm() {
         return this.categoriaLfm;
     }
@@ -76,7 +76,7 @@ public class ProdutosLfm implements java.io.Serializable {
         this.categoriaLfm = categoriaLfm;
     }
 
-    @Column(name = "marca_lfm", nullable = false, length = 30)
+    @Column(name = "marca_lfm", nullable = true, length = 30)
     public String getMarcaLfm() {
         return this.marcaLfm;
     }
@@ -85,7 +85,7 @@ public class ProdutosLfm implements java.io.Serializable {
         this.marcaLfm = marcaLfm;
     }
 
-    @Column(name = "descricao_lfm", nullable = false, length = 60)
+    @Column(name = "descricao_lfm", nullable = true, length = 60)
     public String getDescricaoLfm() {
         return this.descricaoLfm;
     }
@@ -94,7 +94,7 @@ public class ProdutosLfm implements java.io.Serializable {
         this.descricaoLfm = descricaoLfm;
     }
 
-    @Column(name = "imagem_lfm", nullable = false, length = 100)
+    @Column(name = "imagem_lfm", nullable = true, length = 100)
     public String getImagemLfm() {
         return this.imagemLfm;
     }

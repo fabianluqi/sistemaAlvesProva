@@ -47,7 +47,7 @@ public class CategoriasLfm implements java.io.Serializable {
         this.idcategoriasLfm = idcategoriasLfm;
     }
 
-    @Column(name = "nome_lfm", nullable = false, length = 45)
+    @Column(name = "nome_lfm", nullable = true, length = 45)
     public String getNomeLfm() {
         return this.nomeLfm;
     }
@@ -56,7 +56,7 @@ public class CategoriasLfm implements java.io.Serializable {
         this.nomeLfm = nomeLfm;
     }
 
-    @Column(name = "descricao_lfm", nullable = false, length = 60)
+    @Column(name = "descricao_lfm", nullable = true, length = 60)
     public String getDescricaoLfm() {
         return this.descricaoLfm;
     }
@@ -65,7 +65,7 @@ public class CategoriasLfm implements java.io.Serializable {
         this.descricaoLfm = descricaoLfm;
     }
 
-    @Column(name = "imagem_lfm", nullable = false, length = 80)
+    @Column(name = "imagem_lfm", nullable = true, length = 80)
     public String getImagemLfm() {
         return this.imagemLfm;
     }
@@ -74,7 +74,7 @@ public class CategoriasLfm implements java.io.Serializable {
         this.imagemLfm = imagemLfm;
     }
 
-    @Column(name = "status_lfm", nullable = false, length = 10)
+    @Column(name = "status_lfm", nullable = true, length = 10)
     public String getStatusLfm() {
         return this.statusLfm;
     }
@@ -83,7 +83,7 @@ public class CategoriasLfm implements java.io.Serializable {
         this.statusLfm = statusLfm;
     }
 
-    @Column(name = "hierarquia_lfm", nullable = false, length = 1)
+    @Column(name = "hierarquia_lfm", nullable = true, length = 1)
     public String getHierarquiaLfm() {
         return this.hierarquiaLfm;
     }

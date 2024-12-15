@@ -4,6 +4,7 @@
  */
 package view;
 
+import dao.ClientesDAO;
 import javax.swing.JOptionPane;
 import pesquisar.JDlgClientesPesquisar;
 import tools.Util;
@@ -320,6 +321,7 @@ public class JDlgClientes extends javax.swing.JDialog {
                 jTxtEmail, jTxtCelular, jTxtEndereco, jTxtCep, jTxtCidade, jTxtBairro, jTxtNumero, jCboNivel, jChAtivo,
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed

@@ -16,7 +16,7 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "vendas_lfm",
-         catalog = "db_lucas_alves"
+        catalog = "db_lucas_alves"
 )
 public class VendasLfm implements java.io.Serializable {
 
@@ -60,7 +60,7 @@ public class VendasLfm implements java.io.Serializable {
         this.idvendasLfm = idvendasLfm;
     }
 
-    @Column(name = "fkcliente_lfm", nullable = false)
+    @Column(name = "fkcliente_lfm", nullable = true)
     public int getFkclienteLfm() {
         return this.fkclienteLfm;
     }
@@ -70,7 +70,7 @@ public class VendasLfm implements java.io.Serializable {
     }
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "data_lfm", length = 10)
+    @Column(name = "data_lfm", nullable = true, length = 10)
     public Date getDataLfm() {
         return this.dataLfm;
     }
@@ -79,7 +79,7 @@ public class VendasLfm implements java.io.Serializable {
         this.dataLfm = dataLfm;
     }
 
-    @Column(name = "endereco_lfm", nullable = false, length = 80)
+    @Column(name = "endereco_lfm", nullable = true, length = 80)
     public String getEnderecoLfm() {
         return this.enderecoLfm;
     }
@@ -88,7 +88,7 @@ public class VendasLfm implements java.io.Serializable {
         this.enderecoLfm = enderecoLfm;
     }
 
-    @Column(name = "total_lfm", nullable = false, precision = 10)
+    @Column(name = "total_lfm", nullable = true, precision = 10)
     public double getTotalLfm() {
         return this.totalLfm;
     }
@@ -97,7 +97,7 @@ public class VendasLfm implements java.io.Serializable {
         this.totalLfm = totalLfm;
     }
 
-    @Column(name = "produtos_lfm", nullable = false)
+    @Column(name = "produtos_lfm", nullable = true)
     public int getProdutosLfm() {
         return this.produtosLfm;
     }
@@ -106,7 +106,7 @@ public class VendasLfm implements java.io.Serializable {
         this.produtosLfm = produtosLfm;
     }
 
-    @Column(name = "quantidade_lfm", nullable = false)
+    @Column(name = "quantidade_lfm", nullable = true)
     public int getQuantidadeLfm() {
         return this.quantidadeLfm;
     }

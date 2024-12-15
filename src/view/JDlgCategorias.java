@@ -7,6 +7,7 @@ package view;
 import javax.swing.JOptionPane;
 import pesquisar.JDlgCategoriasPesquisar;
 import tools.Util;
+import dao.CategoriasDAO;
 
 public class JDlgCategorias extends javax.swing.JDialog {
 
@@ -186,7 +187,7 @@ public class JDlgCategorias extends javax.swing.JDialog {
         Util.habilitar(true, jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(false, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
-         Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
+        Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
     }//GEN-LAST:event_jBtnIncluirActionPerformed
 
@@ -200,18 +201,22 @@ public class JDlgCategorias extends javax.swing.JDialog {
         JOptionPane.showMessageDialog(null, "Exclusão realizada");
         Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
+
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
         Util.habilitar(false, jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+
+
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         Util.habilitar(false, jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
+
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPesquisarActionPerformed
