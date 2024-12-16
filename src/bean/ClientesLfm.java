@@ -26,7 +26,7 @@ public class ClientesLfm implements java.io.Serializable {
     private String cpfLfm;
     private Date dataNascimentoLfm;
     private String senhaLfm;
-    private int nivelLfm;
+    private String nivelLfm;
     private String ativoLfm;
     private String emailLfm;
     private String celularLfm;
@@ -39,7 +39,7 @@ public class ClientesLfm implements java.io.Serializable {
     public ClientesLfm() {
     }
 
-    public ClientesLfm(String nomeLfm, String apelidoLfm, String cpfLfm, String senhaLfm, int nivelLfm, String ativoLfm, String emailLfm, String celularLfm, String enderecoLfm, String cepLfm, String cidadeLfm, String bairroLfm, String numeroLfm) {
+    public ClientesLfm(String nomeLfm, String apelidoLfm, String cpfLfm, String senhaLfm, String nivelLfm, String ativoLfm, String emailLfm, String celularLfm, String enderecoLfm, String cepLfm, String cidadeLfm, String bairroLfm, String numeroLfm) {
         this.nomeLfm = nomeLfm;
         this.apelidoLfm = apelidoLfm;
         this.cpfLfm = cpfLfm;
@@ -55,7 +55,7 @@ public class ClientesLfm implements java.io.Serializable {
         this.numeroLfm = numeroLfm;
     }
 
-    public ClientesLfm(String nomeLfm, String apelidoLfm, String cpfLfm, Date dataNascimentoLfm, String senhaLfm, int nivelLfm, String ativoLfm, String emailLfm, String celularLfm, String enderecoLfm, String cepLfm, String cidadeLfm, String bairroLfm, String numeroLfm) {
+    public ClientesLfm(String nomeLfm, String apelidoLfm, String cpfLfm, Date dataNascimentoLfm, String senhaLfm, String nivelLfm, String ativoLfm, String emailLfm, String celularLfm, String enderecoLfm, String cepLfm, String cidadeLfm, String bairroLfm, String numeroLfm) {
         this.nomeLfm = nomeLfm;
         this.apelidoLfm = apelidoLfm;
         this.cpfLfm = cpfLfm;
@@ -130,16 +130,16 @@ public class ClientesLfm implements java.io.Serializable {
         this.senhaLfm = senhaLfm;
     }
 
-    @Column(name = "nivel_lfm", nullable = true)
-    public int getNivelLfm() {
+    @Column(name = "nivel_lfm", nullable = true, length = 13)
+    public String getNivelLfm() {
         return this.nivelLfm;
     }
 
-    public void setNivelLfm(int nivelLfm) {
+    public void setNivelLfm(String nivelLfm) {
         this.nivelLfm = nivelLfm;
     }
 
-    @Column(name = "ativo_lfm", nullable = true, length = 1)
+    @Column(name = "ativo_lfm", nullable = true, length = 3)
     public String getAtivoLfm() {
         return this.ativoLfm;
     }

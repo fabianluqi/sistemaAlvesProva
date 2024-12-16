@@ -4,10 +4,14 @@
  */
 package view;
 
+import bean.CategoriasLfm;
+import dao.CategoriasDAO;
 import pesquisar.JDlgCategoriasPesquisar;
 import tools.Util;
 
 public class JDlgCategorias extends javax.swing.JDialog {
+
+    boolean incluir = false;
 
     public JDlgCategorias(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -181,6 +185,7 @@ public class JDlgCategorias extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnIncluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnIncluirActionPerformed
+        incluir = true;
         jTxtCodigo.grabFocus();
         Util.habilitar(true, jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
@@ -197,9 +202,21 @@ public class JDlgCategorias extends javax.swing.JDialog {
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
         Util.mostrar("Exclusão realizada");
+
+        //Exclusão
+        CategoriasDAO categoriasDAO = new CategoriasDAO();
+        int idCategoria = Integer.parseInt(jTxtCodigo.getText());  // Substitua com o ID desejado
+        CategoriasLfm categoria = (CategoriasLfm) categoriasDAO.list(idCategoria);
+
+        if (categoria != null) {
+
+            categoriasDAO.delete(categoria);
+            System.out.println("Grupo excluído com sucesso.");
+        } else {
+            System.out.println("Categoria não encontrada.");
+        }
         Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
-
     }//GEN-LAST:event_jBtnExcluirActionPerformed
 
     private void jBtnConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnConfirmarActionPerformed
@@ -207,6 +224,39 @@ public class JDlgCategorias extends javax.swing.JDialog {
                 jBtnConfirmar, jBtnCancelar);
         Util.habilitar(true, jBtnIncluir, jBtnAlterar, jBtnExcluir, jBtnPesquisar);
 
+        if (incluir == true) {     //Inclusão 
+            CategoriasLfm categorias = new CategoriasLfm();
+            categorias.setNomeLfm(jTxtNome.getText());
+            categorias.setDescricaoLfm(jTxtDescricao.getText());
+            categorias.setImagemLfm(jTxtImagem.getText());
+            categorias.setStatusLfm(jTxtStatus.getText());
+            categorias.setHierarquiaLfm(jTxtHierarquia.getText());
+
+            CategoriasDAO categoriasDAO = new CategoriasDAO();
+            categoriasDAO.insert(categorias);
+            System.out.println("Categoria inserida");
+        } else {
+
+            // Atualização
+            int idCategoria = Integer.parseInt(jTxtCodigo.getText()); // Converte o código para int
+            CategoriasDAO categoriasDAO = new CategoriasDAO();
+
+            // Busca a categoria pelo código
+            CategoriasLfm categorias = (CategoriasLfm) categoriasDAO.list(idCategoria);
+
+            if (categorias != null) { // Garante que a categoria foi encontrada
+                categorias.setNomeLfm(jTxtNome.getText());
+                categorias.setDescricaoLfm(jTxtDescricao.getText());
+                categorias.setImagemLfm(jTxtImagem.getText());
+                categorias.setStatusLfm(jTxtStatus.getText());
+                categorias.setHierarquiaLfm(jTxtHierarquia.getText());
+
+                categoriasDAO.update(categorias); // Atualiza a categoria no banco
+                System.out.println("Categoria atualizada");
+            } else {
+                System.out.println("Categoria não encontrada para o código informado.");
+            }
+        }
 
     }//GEN-LAST:event_jBtnConfirmarActionPerformed
 
