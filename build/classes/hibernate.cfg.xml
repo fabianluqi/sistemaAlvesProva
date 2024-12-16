@@ -40,16 +40,17 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/db_lucas_alves?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">root</property>
-    <mapping class="bean.ClientesLfm"/>
-    <mapping class="bean.ProdutosLfm"/>
-    <mapping class="bean.UsuariosLfm"/>
-    <mapping class="bean.VendasLfm"/>
-    <mapping class="bean.VendasProdutosLfm"/>
-    <mapping class="bean.CategoriasLfm"/>
-  </session-factory>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://10.7.0.51:33062/db_lucas_alves?zeroDateTimeBehavior=convertToNull</property>
+        <property name="hibernate.connection.username">lucas_alves</property>
+        <property name="hibernate.connection.password">lucas_alves</property>
+        <mapping class="bean.ClientesLfm"/>
+        <mapping class="bean.ProdutosLfm"/>
+        <mapping class="bean.UsuariosLfm"/>
+        <mapping class="bean.VendasLfm"/>
+        <mapping class="bean.VendasProdutosLfm"/>
+        <mapping class="bean.CategoriasLfm"/>
+    </session-factory>
 </hibernate-configuration>

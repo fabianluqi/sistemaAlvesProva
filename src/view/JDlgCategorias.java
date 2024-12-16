@@ -49,6 +49,8 @@ public class JDlgCategorias extends javax.swing.JDialog {
 
         jLabel1.setText("Codigo");
 
+        jTxtCodigo.setText("1");
+
         jLabel2.setText("Nome");
 
         jLabel3.setText("Descrição");
@@ -201,7 +203,6 @@ public class JDlgCategorias extends javax.swing.JDialog {
     }//GEN-LAST:event_jBtnAlterarActionPerformed
 
     private void jBtnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnExcluirActionPerformed
-        Util.mostrar("Exclusão realizada");
 
         //Exclusão
         CategoriasDAO categoriasDAO = new CategoriasDAO();
@@ -211,10 +212,12 @@ public class JDlgCategorias extends javax.swing.JDialog {
         if (categoria != null) {
 
             categoriasDAO.delete(categoria);
-            System.out.println("Grupo excluído com sucesso.");
+            System.out.println("Categoria excluída com sucesso.");
         } else {
             System.out.println("Categoria não encontrada.");
         }
+        Util.mostrar("Exclusão realizada");
+
         Util.limpar(jTxtCodigo, jTxtDescricao, jTxtHierarquia, jTxtImagem, jTxtNome, jTxtStatus,
                 jBtnConfirmar, jBtnCancelar);
     }//GEN-LAST:event_jBtnExcluirActionPerformed

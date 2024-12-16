@@ -1,17 +1,9 @@
-/*
- CONTROLLER É A NAMORADA CIUMENTA
-
- */
 package pesquisar;
 
 import bean.UsuariosLfm;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author u05129318102
- */
 public class ControllerUsuarios extends AbstractTableModel {
 
     private List lista;
